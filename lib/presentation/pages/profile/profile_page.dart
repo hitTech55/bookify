@@ -13,7 +13,9 @@ class ProfilePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Column(
+          child:(profileProvider.loading)? const CupertinoActivityIndicator(
+            radius: 10,
+          ):Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[

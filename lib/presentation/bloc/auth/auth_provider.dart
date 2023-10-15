@@ -38,7 +38,8 @@ class AuthProvider extends ChangeNotifier {
 
         final user = (await _auth.signInWithCredential(credential)).user!;
         print("User: $user");
-        if (await checkIfUserAlreadyExists(user.uid)) {
+        bool userExists = await checkIfUserAlreadyExists(user.uid);
+        if (!userExists) {
           try {
             final DocumentReference ref =
                 _firebaseFireStore.collection('users').doc(user.uid);
@@ -72,7 +73,7 @@ class AuthProvider extends ChangeNotifier {
             notifyListeners();
             break;
           default:
-            _errorCode = e.toString();
+            _errorCode = "Error here. . . ${e.toString()}";
             _error = true;
             openSnackBar(context, errorCode, Colors.red);
             notifyListeners();
