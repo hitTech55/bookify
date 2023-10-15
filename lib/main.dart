@@ -2,7 +2,6 @@ import 'package:bookify/config/routes/routes.dart';
 import 'package:bookify/config/theme/app_themes.dart';
 import 'package:bookify/firebase_options.dart';
 import 'package:bookify/presentation/bloc/home/home_provider.dart';
-import 'package:bookify/presentation/bloc/internet_provider.dart';
 import 'package:bookify/presentation/bloc/profile/profile_provider.dart';
 import 'package:bookify/presentation/pages/auth/login_page.dart';
 import 'package:bookify/presentation/pages/home/home_page.dart';
