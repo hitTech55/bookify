@@ -1,5 +1,6 @@
 
 import 'package:bookify/presentation/pages/auth/login_page.dart';
+import 'package:bookify/presentation/pages/home/book_detail_page.dart';
 import 'package:bookify/presentation/pages/home/home_page.dart';
 import 'package:bookify/presentation/pages/home/books_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +15,8 @@ class AppRoutes {
         return _materialRoute(const LoginPage());
       case '/book':
         return _materialRoute(const BooksPage());
+      case '/bookDetails':
+        return _materialRoute(const BookDetailPage());
       default:
         return _materialRoute(const LoginPage());
     }
